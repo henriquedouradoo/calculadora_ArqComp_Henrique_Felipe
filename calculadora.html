@@ -1,0 +1,407 @@
+<!-- Criado por Marise Miranda | 2017.1 -->
+<!-- Adaptado por Matheus Matos | 2025.1 -->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPTecher's Machine</title>
+</head>
+
+<style>
+    .banner {
+        align-items: center;
+        text-align: center;
+        background-color: #1ea11e;
+        height: 9vw;
+
+        border-radius: 4px;
+
+    }
+
+    .banner h1 {
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 3vw;
+
+        margin-top: 1vw;
+
+        position: relative;
+        top: 30%;
+
+    }
+
+    .processamentos {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .processamento-hexa {
+        align-items: center;
+        text-align: center;
+
+        border: 1px solid #1ea11e;
+        background-color: #1ea11e;
+        border-radius: 8px;      
+        width: 20%;
+
+    }
+
+    .processamento-hexa h3 {
+        color: #fff;
+        font-family: sans-serif;
+
+    }
+
+    .processamento-hexa input {
+        border: none;
+        border-radius: 4px;
+
+        padding: 0.6rem;
+        width: 80%;
+    }
+
+    .processamento-hexa button {
+        border: none;
+        border-radius: 8px;
+        background: black;
+        border: 2px solid #000000;
+        color: white;
+        height: 2.6rem;
+        width: 88%;
+
+        transition: all 0.4s ease;
+    }
+
+    .processamento-hexa button:hover {
+        background-color: #fff;
+        color: black;
+        border: 2px solid #fff;
+
+    }
+
+    .processamento-hexa p {
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: bold;
+
+    }
+
+    .processamento-hexa span {
+        color: #000000;
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: underline;
+        
+    }
+
+    .processamento-decimal {
+        align-items: center;
+        text-align: center;
+
+        border: 1px solid #1ea11e;
+        background-color: #1ea11e;
+        border-radius: 8px;      
+        width: 23%;
+
+    }
+
+    .processamento-decimal h3 {
+        color: #fff;
+        font-family: sans-serif;
+
+    }
+
+    .processamento-decimal input {
+        border: none;
+        border-radius: 4px;
+
+        padding: 0.6rem;
+        width: 80%;
+    }
+
+    .processamento-decimal button {
+        border: none;
+        border-radius: 8px;
+        background: black;
+        border: 2px solid #000000;
+        color: white;
+        height: 2.6rem;
+        width: 88%;
+
+        transition: all 0.4s ease;
+    }
+
+    .processamento-decimal button:hover {
+        background-color: #fff;
+        color: black;
+        border: 2px solid #fff;
+
+    }
+
+    .processamento-decimal p {
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: bold;
+
+    }
+
+    .processamento-decimal span {
+        color: #000000;
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: underline;
+        
+    }
+
+    .processamento-octal {
+        align-items: center;
+        text-align: center;
+
+        border: 1px solid #1ea11e;
+        background-color: #1ea11e;
+        border-radius: 8px;      
+        width: 23%;
+
+    }
+
+    .processamento-octal h3 {
+        color: #fff;
+        font-family: sans-serif;
+
+    }
+
+    .processamento-octal input {
+        border: none;
+        border-radius: 4px;
+
+        padding: 0.6rem;
+        width: 80%;
+    }
+
+    .processamento-octal button {
+        border: none;
+        border-radius: 8px;
+        background: black;
+        border: 2px solid #000000;
+        color: white;
+        height: 2.6rem;
+        width: 88%;
+
+        transition: all 0.4s ease;
+    }
+
+    .processamento-octal button:hover {
+        background-color: #fff;
+        color: black;
+        border: 2px solid #fff;
+
+    }
+
+    .processamento-octal p {
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: bold;
+
+    }
+
+    .processamento-octal span {
+        color: #000000;
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: underline;
+        
+    }
+
+    .processamento-hexa {
+        align-items: center;
+        text-align: center;
+
+        border: 1px solid #1ea11e;
+        background-color: #1ea11e;
+        border-radius: 8px;      
+        width: 23%;
+
+    }
+
+    .processamento-hexa h3 {
+        color: #fff;
+        width: 100%;
+        font-family: sans-serif;
+
+    }
+
+    .processamento-hexa input {
+        border: none;
+        border-radius: 4px;
+
+        padding: 0.6rem;
+        width: 80%;
+    }
+
+    .processamento-hexa button {
+        border: none;
+        border-radius: 8px;
+        background: black;
+        border: 2px solid #000000;
+        color: white;
+        height: 2.6rem;
+        width: 88%;
+
+        transition: all 0.4s ease;
+    }
+
+    .processamento-hexa button:hover {
+        background-color: #fff;
+        color: black;
+        border: 2px solid #fff;
+
+    }
+
+    .processamento-hexa p {
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: bold;
+
+    }
+
+    .processamento-hexa span {
+        color: #000000;
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: underline;
+        
+    }
+
+    .contato {
+        align-items: center;
+        background-color: #000000;
+        border-radius: 4px;
+        height: 12vw;
+        text-align: center;
+        color: #fff;
+        padding: 1rem;
+        font-family: sans-serif;
+    }
+
+    .email {
+        color: #fff;
+        font-weight: bold;
+        font-family: sans-serif;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    
+</style>
+
+<body>
+    <div class="banner">
+        <h1 id="title">Number System Machine</h1>
+    </div>
+    <br><br>
+    <div class="processamentos">
+    <div class="processamento-hexa">
+        <h3>Digite um número Binário:</h3>
+        <input id="demo1" type="text" placeholder="Exemplo: 12">
+        <br><br>
+
+        <button onclick="converter()">Converter</button>
+        <br><br>
+
+        <h3>Resultados:</h3>
+        
+        <p>Octal: <span id="demo2"></span>
+        </p>
+        <p>Hexadecimal: <span id="demo3"></span>
+        </p>
+        <p>Binário: <span id="demo4"></span>
+        </p>
+
+    </div>
+
+    <div class="processamento-decimal">
+        <h3>Digite um número Decimal:</h3>
+        <input id="demo1" type="text" placeholder="Exemplo: 12">
+        <br><br>
+
+        <button onclick="converter()">Converter</button>
+        <br><br>
+
+        <h3>Resultados:</h3>
+        
+        <p>Octal: <span id="demo2"></span>
+        </p>
+        <p>Hexadecimal: <span id="demo3"></span>
+        </p>
+        <p>Binário: <span id="demo4"></span>
+        </p>
+
+    </div>
+
+    <div class="processamento-octal">
+        <h3>Digite um número Octal:</h3>
+        <input id="demo1" type="text" placeholder="Exemplo: 12">
+        <br><br>
+
+        <button onclick="converter()">Converter</button>
+        <br><br>
+
+        <h3>Resultados:</h3>
+        
+        <p>Octal: <span id="demo2"></span>
+        </p>
+        <p>Hexadecimal: <span id="demo3"></span>
+        </p>
+        <p>Binário: <span id="demo4"></span>
+        </p>
+
+    </div>
+
+    <div class="processamento-hexa">
+        <h3>Digite um número Hexadecimal:</h3>
+        <input id="demo1" type="text" placeholder="Exemplo: 12">
+        <br><br>
+
+        <button onclick="converter()">Converter</button>
+        <br><br>
+
+        <h3>Resultados:</h3>
+        
+        <p>Octal: <span id="demo2"></span>
+        </p>
+        <p>Hexadecimal: <span id="demo3"></span>
+        </p>
+        <p>Binário: <span id="demo4"></span>
+        </p>
+
+    </div>
+    </div>
+    <br><br>
+    <div class="contato">
+        <h3>Contate-nos</h3>
+        <h4>Desenvolvedores - 1SISA 2025</h4>
+        
+        <div class="email">
+        <p>Henrique - henrique.domingos@sptech.school</p>
+        <p>Felipe - felipe.lima@sptech.school</p>
+    </div>
+    </div>
+
+    <script>
+        function converter() {
+            var decimal = Number(demo1.value);
+
+            demo2.innerHTML = decimal.toString(8);
+            demo3.innerHTML = decimal.toString(16);
+            demo4.innerHTML = decimal.toString(2);
+
+        }
+    </script>
+</body>
+
+</html>
