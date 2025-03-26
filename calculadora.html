@@ -482,36 +482,56 @@
         function converterBinario() {
             var numBinario = Number(numeroBinario.value);
             numBinario = parseInt(numBinario, 2);
+
+            if (numBinario == '') {
+                alert ('Insira valores corretos!');
+            } else {
             octal.innerHTML = numBinario.toString(8);
             hexa.innerHTML = numBinario.toString(16);
             decimal.innerHTML = numBinario.toString(10);
             binario.innerHTML = numBinario.toString(2);
+            }
         }
 
         function converterDecimal() {
             var numDecimal = Number(numeroDecimal.value);
+
+            if (numDecimal == '') {
+                alert ('Insira valores corretos!');
+            } else {
             octal2.innerHTML = numDecimal.toString(8);
             hexa2.innerHTML = numDecimal.toString(16);
             decimal2.innerHTML = numDecimal.toString(10);
             binario2.innerHTML = numDecimal.toString(2);
+            }
         }
 
         function converterOctal() {
             var numOctal = Number(numeroOctal.value);
             numOctal = parseInt(numOctal, 8);
+
+            if (numOctal == '') {
+                alert ('Insira valores corretos!');
+            } else {
             octal3.innerHTML = numOctal.toString(8);
             hexa3.innerHTML = numOctal.toString(16);
             decimal3.innerHTML = numOctal.toString(10);
             binario3.innerHTML = numOctal.toString(2);
+            }
         }
 
         function converterHexa() {
             var numHexa = numeroHexa.value;
             numHexa = parseInt(numHexa, 16);
+
+            if (numHexa == '' || numHexa != numHexa) {
+                alert ('Insira valores corretos!');
+            } else {
             octal4.innerHTML = numHexa.toString(8);
             hexa4.innerHTML = numHexa.toString(16);
             decimal4.innerHTML = numHexa.toString(10);
             binario4.innerHTML = numHexa.toString(2);
+            }
         }
     </script>
 </body>
