@@ -307,76 +307,84 @@
     <div class="processamentos">
     <div class="processamento-hexa">
         <h3>Digite um número Binário:</h3>
-        <input id="demo1" type="text" placeholder="Exemplo: 12">
+        <input id="numeroBinario" type="text" placeholder="Exemplo: 12">
         <br><br>
 
-        <button onclick="converter()">Converter</button>
+        <button onclick="converterBinario()">Converter</button>
         <br><br>
 
         <h3>Resultados:</h3>
         
-        <p>Octal: <span id="demo2"></span>
+        <p>Octal: <span id="octal"></span>
         </p>
-        <p>Hexadecimal: <span id="demo3"></span>
+        <p>Hexadecimal: <span id="hexa"></span>
         </p>
-        <p>Binário: <span id="demo4"></span>
+        <p>Binário: <span id="binario"></span>
+        </p>
+        <p>Decimal: <span id="decimal"></span>
         </p>
 
     </div>
 
     <div class="processamento-decimal">
         <h3>Digite um número Decimal:</h3>
-        <input id="demo1" type="text" placeholder="Exemplo: 12">
+        <input id="numeroDecimal" type="text" placeholder="Exemplo: 12">
         <br><br>
 
-        <button onclick="converter()">Converter</button>
+        <button onclick="converterDecimal()">Converter</button>
         <br><br>
 
         <h3>Resultados:</h3>
         
-        <p>Octal: <span id="demo2"></span>
+        <p>Octal: <span id="octal2"></span>
         </p>
-        <p>Hexadecimal: <span id="demo3"></span>
+        <p>Hexadecimal: <span id="hexa2"></span>
         </p>
-        <p>Binário: <span id="demo4"></span>
+        <p>Binário: <span id="binario2"></span>
+        </p>
+        <p>Decimal: <span id="decimal2"></span>
         </p>
 
     </div>
 
     <div class="processamento-octal">
         <h3>Digite um número Octal:</h3>
-        <input id="demo1" type="text" placeholder="Exemplo: 12">
+        <input id="numeroOctal" type="text" placeholder="Exemplo: 12">
         <br><br>
 
-        <button onclick="converter()">Converter</button>
+        <button onclick="converterOctal()">Converter</button>
         <br><br>
 
         <h3>Resultados:</h3>
         
-        <p>Octal: <span id="demo2"></span>
+        <p>Octal: <span id="octal3"></span>
         </p>
-        <p>Hexadecimal: <span id="demo3"></span>
+        <p>Hexadecimal: <span id="hexa3"></span>
         </p>
-        <p>Binário: <span id="demo4"></span>
+        <p>Binário: <span id="binario3"></span>
+        </p>
+        <p>Decimal: <span id="decimal3"></span>
         </p>
 
     </div>
 
     <div class="processamento-hexa">
         <h3>Digite um número Hexadecimal:</h3>
-        <input id="demo1" type="text" placeholder="Exemplo: 12">
+        <input id="numeroHexa" type="text" placeholder="Exemplo: 12">
         <br><br>
 
-        <button onclick="converter()">Converter</button>
+        <button onclick="converterHexa()">Converter</button>
         <br><br>
 
         <h3>Resultados:</h3>
         
-        <p>Octal: <span id="demo2"></span>
+        <p>Octal: <span id="octal4"></span>
         </p>
-        <p>Hexadecimal: <span id="demo3"></span>
+        <p>Hexadecimal: <span id="hexa4"></span>
         </p>
-        <p>Binário: <span id="demo4"></span>
+        <p>Binário: <span id="binario4"></span>
+        </p>
+        <p>Decimal: <span id="decimal4"></span>
         </p>
 
     </div>
@@ -393,13 +401,40 @@
     </div>
 
     <script>
-        function converter() {
-            var decimal = Number(demo1.value);
 
-            demo2.innerHTML = decimal.toString(8);
-            demo3.innerHTML = decimal.toString(16);
-            demo4.innerHTML = decimal.toString(2);
+        function converterBinario() {
+            var numBinario = Number(numeroBinario.value);
+            numBinario = parseInt(numBinario, 2);
+            octal.innerHTML = numBinario.toString(8);
+            hexa.innerHTML = numBinario.toString(16);
+            decimal.innerHTML = numBinario.toString(10);
+            binario.innerHTML = numBinario.toString(2);
+        }
 
+        function converterDecimal() {
+            var numDecimal = Number(numeroDecimal.value);
+            octal2.innerHTML = numDecimal.toString(8);
+            hexa2.innerHTML = numDecimal.toString(16);
+            decimal2.innerHTML = numDecimal.toString(10);
+            binario2.innerHTML = numDecimal.toString(2);
+        }
+
+        function converterOctal() {
+            var numOctal = Number(numeroOctal.value);
+            numOctal = parseInt(numOctal, 8);
+            octal3.innerHTML = numOctal.toString(8);
+            hexa3.innerHTML = numOctal.toString(16);
+            decimal3.innerHTML = numOctal.toString(10);
+            binario3.innerHTML = numOctal.toString(2);
+        }
+
+        function converterHexa() {
+            var numHexa = numeroHexa.value;
+            numHexa = parseInt(numHexa, 16);
+            octal4.innerHTML = numHexa.toString(8);
+            hexa4.innerHTML = numHexa.toString(16);
+            decimal4.innerHTML = numHexa.toString(10);
+            binario4.innerHTML = numHexa.toString(2);
         }
     </script>
 </body>
